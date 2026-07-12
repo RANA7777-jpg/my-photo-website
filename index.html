@@ -1,25 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Photo Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Photo Website</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f4f4;
+    text-align:center;
+}
+
+header{
+    background:#0066cc;
+    color:white;
+    padding:20px;
+}
+
+.container{
+    padding:30px;
+}
+
+img{
+    width:90%;
+    max-width:500px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+p{
+    font-size:18px;
+    color:#333;
+}
+</style>
 </head>
+
 <body>
-    <h1>My Photo Website</h1>
 
-    <input type="file" id="photo" accept="image/*">
+<header>
+<h1>My Photo Website</h1>
+</header>
 
-    <br><br>
+<div class="container">
+<img src="images.jpg" alt="My Photo">
+<p>Welcome to my personal photo website.</p>
+</div>
 
-    <img id="preview" width="300">
-
-    <script>
-        const photo = document.getElementById("photo");
-        const preview = document.getElementById("preview");
-
-        photo.onchange = function () {
-            const file = photo.files[0];
-            preview.src = URL.createObjectURL(file);
-        };
-    </script>
 </body>
 </html>
